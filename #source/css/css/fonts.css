@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Antipasto";
+  src: url("../../fonts/Antipasto/AntipastoPro-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Antipasto";
+  src: url("../../fonts/Antipasto/AntipastoPro-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Antipasto";
+  src: url("../../fonts/Antipasto/AntipastoPro-Thin.ttf");
+  font-weight: 50;
+}
+@font-face {
+  font-family: "Antipasto";
+  src: url("../../fonts/Antipasto/AntipastoPro-Medium.ttf");
+  font-weight: 300;
+}
