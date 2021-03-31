@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -15,12 +18,25 @@
             <div class="header__container">
                 <div class="header__row">
                     <div class="header__left">
-                        <button class="header__location"><i class="fas fa-map-marker-alt"></i>Ташкент</button>
-                        <button class="header__lang"><img src="./img/svg/rus.svg" alt=""> Rus</button>
+                        <div class="header__dropdown header__dropdown-location">
+                            <button class="header__location" data-toggle="dropdown"><i class="fas fa-map-marker-alt"></i>Ташкент</button>
+                            <div class="header__dropdownMenu dropdown-menu" id="header__locationMenu">
+                                <h5 class="dropdown-header">Выберите регион</h5>
+                                <a href="" class="dropdown-item">Андижан</a>
+                                <a href="" class="dropdown-item">Фергана</a>
+                            </div>
+                        </div>
+                        <div class="header__dropdown header__dropdown-lang">
+                            <button class="header__lang" data-toggle="dropdown"><img src="./img/svg/rus.svg"> Rus</button>
+                            <div class="header__dropdownMenu dropdown-menu" id="header__locationMenu">
+                                <a href="" class="dropdown-item"><img src="./img/svg/uz.svg" alt="">Узбекский</a>
+                                <a href="" class="dropdown-item"><img src="./img/svg/eng.svg" alt="">Английский</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="header__right">
-                        <span><i class="fas fa-phone"></i>+998934170886</span>
-                        <span><i class="fas fa-phone"></i>abcdefg123@gmail.com</span>
+                        <span><i class="fas fa-phone"></i>+998 71 200 99 66</span>
+                        <span><i class="fas fa-envelope"></i>abcdefg123@gmail.com</span>
                         <ul class="nav">
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
@@ -35,18 +51,19 @@
             <div class="header__container">
                 <div class="header__grid header__grid-middle">
                     <div class="header__logo">Logo here</div>
-                    <div class="header__searchWrapper">
+                    <div class="d-flex header__searchWrapper">
+                        <button class="header__category btn" id="header-category"><i class="fas fa-list"></i>Каталог</button>
                         <input type="text" class="header__search" placeholder="Поиск">
                         <i class="fas fa-search"></i>
                     </div>
                     <div class="header__right header__right-middle">
                         <div class="header__item-favour header-item">
-                            <div class="header-item__icon header-icon"><i class="fas fa-heart"></i></div>
+                            <div class="header-item__icon header-icon"><i class="bi-heart"></i></div>
                         </div>
                         <div class="header__item-user header-item">
                             <div class="header-item__icon header-icon">
-                                <i class="fas fa-user"></i>
-                                <div class="header-icon__badge">1</div>
+                                <i class="bi-person"></i>
+                                <div class="header-icon__badge">5</div>
                             </div>
                             <div class="header-item__text">
                                 <span>Wellcome</span>
@@ -55,8 +72,8 @@
                         </div>
                         <div class="header__item-cart header-item">
                             <div class="header-item__icon header-icon">
-                                <i class="fas fa-shopping-cart"></i>
-                                <div class="header-icon__badge">2</div>
+                                <i class="bi-cart2"></i>
+                                <div class="header-icon__badge">16</div>
                             </div>
                             <div class="header-item__text">
                                 <span>User name</span>
@@ -70,20 +87,570 @@
         <div class="header__bottom">
             <div class="header__container">
                 <div class="header-row">
-                    <ul class="nav">
-                        <li class="dropdown category"><a href="#">
-                            <i class="fas fa-table"></i>
-                            Категории
-                        </a></li>
+                    <ul class="nav d-flex align-items-center">
+                        <!-- <li class="dropdown category"><a href="#">
+                            <i class="fas fa-list mr-2"></i>
+                            Каталог
+                        </a>
+                        </li> -->
+                        <!-- <div class="divider"></div> -->
                         <li class="active"><a href="#">Главная</a></li>
                         <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Услуги</a></li>
+                        <li class="dropdown"><a href="#">Услуги</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Компьютерные услуги</a></li>
+                                <li><a href="#">Подарки</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">Новости</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
+                <div class="header__categoryMenu header-categoryMenu" id="heder__categoryMenu">
+                    <div class="header-categoryMenu__grid">
+                        <div class="header-categoryMenu__main">
+                            <ul>
+                                <li class="active"><a href="#"><i class="bi-speaker"></i>Аудиотехника</a>
+                                    <div class="header-categoryMenu__submenu">
+                                        <div class="hedaer-categoryLi__grid">
+                                            <ul>
+                                                <li><a href="#">Автомобильная акустика</a></li>
+                                                <li><a href="#">Аксессуары и наушники для колл-центра</a></li>
+                                                <li><a href="#">Диктофоны</a></li>
+                                                <li><a href="#">Домашние кинотеатры</a></li>
+                                                <li><a href="#">Звуковые панели</a></li>
+                                                <li><a href="#">Колонки и сабвуферы</a></li>
+                                                <li><a href="#">Музыкальные центры</a></li>
+                                                <li><a href="#">Плееры и портативная акустика</a></li>
+                                                <li><a href="#">Радиоприемники и радиочасы</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li class="heading"><a href="#">Наушники</a></li>
+                                                <li><a href="#">Наушники SONY</a></li>
+                                                <li><a href="#">Наушники Baseus</a></li>
+                                            </ul>
+                                            <div class="header-categoryMenu__good">
+                                                <div class="image"><img src="./img/goods/4.jpg" alt=""></div>
+                                                <h4>Начиная с $15.80</h4>
+                                                <button class="btn btn-primary">Смотреть товар <i class="fas fa-chevron-right ml-2"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#"><i class="bi bi-camera"></i>Видео и фототехника</a>
+                                    <div class="header-categoryMenu__submenu">
+                                        <div class="hedaer-categoryLi__grid">
+                                            <div class="group">
+                                                <ul>
+                                                    <li class="heading"><a href="#">Видеокамеры</a></li>
+                                                    <li><a href="#">Видеокамеры CANON</a></li>
+                                                    <li><a href="#">Видеокамеры PANASONIC</a></li>
+                                                    <li><a href="#">Видеокамеры SONY</a></li>
+                                                    <li><a href="#">Видеорегистраторы</a></li>
+                                                </ul>
+                                                <hr>
+                                                <ul>
+                                                    <li><a href="#">Сетевые видеокамеры</a></li>
+                                                    <li><a href="#">Экшн-камеры GoPro</a></li>
+                                                </ul>
+                                            </div>
+                                            <ul>
+                                                <li class="heading"><a href="#">Фотокамеры</a></li>
+                                                <li><a href="#">Фотокамеры CANON</a></li>
+                                                <li><a href="#">Фотокамеры FUJIFILM</a></li>
+                                                <li><a href="#">Фотокамеры NIKON</a></li>
+                                                <li><a href="#">Фотокамеры SONY</a></li>
+                                            </ul>
+                                            <div class="header-categoryMenu__good">
+                                                <div class="image"><img src="./img/goods/7.png" alt=""></div>
+                                                <h4>Начиная с $15.80</h4>
+                                                <button class="btn btn-primary">Смотреть товар<i class="fas fa-chevron-right ml-2"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#"><i class="fas fa-baby-carriage"></i>Детские товары</a>
+                                    <div class="header-categoryMenu__submenu">
+                                        <div class="hedaer-categoryLi__grid">
+                                            <ul>
+                                                <li><a href="#">Автокресла</a></li>
+                                                <li><a href="#">Видеоняни и радионяни</a></li>
+                                                <li><a href="#">Детские аксессуары</a></li>
+                                                <li><a href="#">Детские соски и пустышки</a></li>
+                                                <li><a href="#">Коляски</a></li>
+                                            </ul>
+                                            <div class="header-categoryMenu__good">
+                                                <div class="image"><img src="./img/goods/8.png" alt=""></div>
+                                                <h4>Начиная с $15.80</h4>
+                                                <button class="btn btn-primary">See good <i class="fas fa-chevron-right ml-2"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#"><i class="bi-display"></i>Бытовая техника</a>
+                                    <div class="header-categoryMenu__submenu">
+                                        <div class="hedaer-categoryLi__grid">
+                                            <div class="group">
+                                                <ul>
+                                                    <li class="heading"><a href="#">Красота и уход за собой</a></li>
+                                                    <li><a href="#">Зубные щетки и ирригаторы</a></li>
+                                                    <li><a href="#">Машинки для стрижки волос</a></li>
+                                                    <li><a href="#">Плойки и выпрямители волос</a></li>
+                                                    <li><a href="#">Фены</a></li>
+                                                    <li><a href="#">Электробритвы</a></li>
+                                                    <li><a href="#">Эпиляторы</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li class="heading"><a href="#">Климатическая техника</a></li>
+                                                    <li><a href="#">Вентиляторы</a></li>
+                                                    <li><a href="#">Обогреватели</a></li>
+                                                    <li><a href="#">Увлажнители и очистители воздуха</a></li>
+                                                </ul>
+
+                                            </div>
+
+                                            <div class="group">
+                                                <ul>
+                                                    <li class="heading"><a href="#">Наушники</a></li>
+                                                    <li><a href="#">Наушники SONY</a></li>
+                                                    <li><a href="#">Наушники Baseus</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="group">
+                                                <ul>
+                                                    <li class="heading"><a href="#">Наушники</a></li>
+                                                    <li><a href="#">Наушники SONY</a></li>
+                                                    <li><a href="#">Наушники Baseus</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#"><i class="bi-laptop"></i>Компьютерная техника</a></li>
+                                <li><a href="#"><i class="bi-paperclip"></i>Офисная техника</a></li>
+                                <li><a href="#"><i class="bi-display"></i>Электроника</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="category-menu__background modal-background"></div>
     </header>
+<!-- main content section -->
+    <div class="main-content">
+        <div class="wrapper">
+            <div class="main-content__grid">
+                <div class="main-content__main">
+                    <!-- slider section -->
+                    <section class="main-slider">
+                        <div class="section-container">
+                            <div class="main-slider__container swiper-container">
+                                <div class="swiper-wrapper">
+                    
+                                    <div class="main-slider__content main-slider__content-1 swiper-slide">
+                                        <div class="main-slider__text">
+                                            <span class="category">Category</span>
+                                            <p>Sony Беспроводные наушники WI-C310B Black Sony </p>
+                                            <button class="btn btn-white">Подробно <i class="fas fa-chevron-right"></i></button>
+                                        </div>
+                                        <div class="main-slider__image"><img src="./img/slider/slider element.png" alt=""></div>
+                                    </div>
+                                    <div class="main-slider__content main-slider__content-2 swiper-slide">
+                                        <div class="main-slider__text">
+                                            <span class="category">Category</span>
+                                            <p>Sony Беспроводные наушники WI-C310B Black Sony </p>
+                                            <button class="btn btn-white">Подробно <i class="fas fa-chevron-right"></i></button>
+                                        </div>
+                                        <div class="main-slider__image"><img src="./img/slider/slider element.png" alt=""></div>
+                                    </div>
+                                    <div class="main-slider__content main-slider__content-3 swiper-slide">
+                                        <div class="main-slider__text">
+                                            <span class="category">Category</span>
+                                            <p>Sony Беспроводные наушники WI-C310B Black Sony </p>
+                                            <button class="btn btn-white">Подробно <i class="fas fa-chevron-right"></i></button>
+                                        </div>
+                                        <div class="main-slider__image"><img src="./img/slider/slide2.jpg" alt=""></div>
+                                    </div>
+                
+                                </div>
+                
+                                    <!-- If we need pagination -->
+                                    <div class="main-slider__pagination swiper-pagination"></div>
+                
+                                    <!-- If we need navigation buttons -->
+                                    <!-- <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div> -->
+                            </div>
+                        </div>
+                    </section>
+                    <!-- category section -->
+                    <section class="goods-category">
+                        <div class="section-container">
+                            <div class="category__grid section-grid_4">
+                
+                                <div class="category__item category-item">
+                                    <div class="category-item__container">
+                                        <div class="category-item__image"><img src="./img/category/phones.png" alt=""></div>
+                                        <div class="category-item__text">
+                                            <h5>Телефоны и смартфоны</h5>
+                                            <a href="#">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="category__item category-item">
+                                    <div class="category-item__container">
+                                        <div class="category-item__image"><img src="./img/category/phones2.png" alt=""></div>
+                                        <div class="category-item__text">
+                                            <h5>Телефоны и смартфоны</h5>
+                                            <a href="#">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="category__item category-item">
+                                    <div class="category-item__container">
+                                        <div class="category-item__image"><img src="./img/category/earphones.png" alt=""></div>
+                                        <div class="category-item__text">
+                                            <h5>Наушники и аксессуары</h5>
+                                            <a href="#">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="category__item category-item">
+                                    <div class="category-item__container">
+                                        <div class="category-item__image"><img src="./img/category/pult.png" alt=""></div>
+                                        <div class="category-item__text">
+                                            <h5>Бытовые техники</h5>
+                                            <a href="#">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                            </div>
+                        </div>
+                    </section>
+                    <!-- goods section -->
+                    <section class="goods goods_slider pb-5">
+                        <div class="section-container">
+                            <div class="section-row align-items-center mb-3">
+                                <h1 class="section-heading">Наши новинки</h1>
+                                <button class="goods__slides-control goods__slides-control_left_new ml-auto"><i class="fas fa-chevron-left"></i></button>
+                                <button class="goods__slides-control goods__slides-control_right_new"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="goods__new swiper-container">
+                                <div class="goods-item__grid swiper-wrapper">
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/1.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
+                                        </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="goods-item__price-cross">130 000 UZS</span>
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/4.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
+                                        </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="goods-item__row align-items-center">
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/4.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
+                                        </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="goods-item__row align-items-center">
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/4.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
+                                        </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="goods-item__row align-items-center">
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                                <span class="ml-auto goods-item__price-cross">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/4.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
+                                        </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="goods-item__row align-items-center">
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                                <span class="ml-auto goods-item__price-cross">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <section class="goods goods_slider pb-5">
+                        <div class="section-container">
+                            <div class="section-row align-items-center mb-3">
+                                <h1 class="section-heading">Наши новинки</h1>
+                                <button class="goods__slides-control ml-auto"><i class="fas fa-chevron-left"></i></button>
+                                <button class="goods__slides-control"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="goods-item__grid section-grid_4">
+                                <div class="goods__item goods-item">
+                                    <div class="goods-item__image">
+                                        <img src="./img/goods/1.jpg" alt="">
+                                        <div class="goods-item__favour"><i class="fas fa-heart"></i></div>
+                                        <div class="goods-item__newLabel">новинка</div>
+                                    </div>
+                                    <div class="goods-item__textContent">
+                                        <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                        <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                        <div class="goods-item__row">
+                                            <span class="goods-item__price">130 000 UZS</span>
+                                            <ul class="goods-item__stars">
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li><a href=""><i class="fas fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                
+                                        <div class="goods-item__details">
+                                            <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="goods__item goods-item">
+                                    <div class="goods-item__image">
+                                        <img src="./img/goods/4.jpg" alt="">
+                                        <div class="goods-item__favour"><i class="fas fa-heart"></i></div>
+                                        <div class="goods-item__newLabel">новинка</div>
+                                    </div>
+                                    <div class="goods-item__textContent">
+                                        <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                        <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                        <div class="goods-item__row">
+                                            <span class="goods-item__price">130 000 UZS</span>
+                                            <ul class="goods-item__stars">
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li><a href=""><i class="fas fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                
+                                        <div class="goods-item__details">
+                                            <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="goods__item goods-item">
+                                    <div class="goods-item__image">
+                                        <img src="./img/goods/4.jpg" alt="">
+                                        <div class="goods-item__favour"><i class="fas fa-heart"></i></div>
+                                        <div class="goods-item__newLabel">новинка</div>
+                                    </div>
+                                    <div class="goods-item__textContent">
+                                        <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                        <a href="#" class="goods-item__title">Sony Беспроводные наушники</a>
+                                        <div class="goods-item__row">
+                                            <span class="goods-item__price">130 000 UZS</span>
+                                            <ul class="goods-item__stars">
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li><a href=""><i class="fas fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                
+                                        <div class="goods-item__details">
+                                            <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="goods__item goods-item">
+                                    <div class="goods-item__image">
+                                        <img src="./img/goods/4.jpg" alt="">
+                                        <div class="goods-item__favour"><i class="fas fa-heart"></i></div>
+                                        <div class="goods-item__newLabel">новинка</div>
+                                    </div>
+                                    <div class="goods-item__textContent">
+                                        <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                        <a href="#" class="goods-item__title">Sony Беспроводные наушники</a>
+                                        <div class="goods-item__row">
+                                            <span class="goods-item__price">130 000 UZS</span>
+                                            <ul class="goods-item__stars">
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                <li><a href=""><i class="fas fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                
+                                        <div class="goods-item__details">
+                                            <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="news">
+                        <div class="section-container">
+                            <div class="d-flex">
+                                <h1 class="section-heading">Новости</h1>
+                                <a class="ml-auto" href="#">Смотреть все <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- jasvascript include section -->
+
+    <script src="./bootstrap/js/jquery.min.js"></script>
+    <script src="./bootstrap/js/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./swiper/js/swiper.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
