@@ -1,0 +1,11 @@
+.section-grid {
+  display: grid;
+}
+.section-grid_2 {
+  display: inherit;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-grid_4 {
+  display: inherit;
+  grid-template-columns: repeat(4, 1fr);
+}

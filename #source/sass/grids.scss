@@ -1,0 +1,21 @@
+.section-grid{
+    display: grid;
+    $parentDisplay : grid;
+    &_2{
+        display: $parentDisplay;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+    &_3{
+        display: $parentDisplay;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+    }
+    &_4{
+        display: $parentDisplay;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+
+}
