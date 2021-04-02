@@ -89,13 +89,12 @@
                 <div class="header-row">
                     <ul class="nav d-flex align-items-center">
                         <!-- <li class="dropdown category"><a href="#">
-                            <i class="fas fa-list mr-2"></i>
+                            <i class="fas fa-table mr-2"></i>
                             Каталог
                         </a>
-                        </li> -->
-                        <!-- <div class="divider"></div> -->
+                        </li>
+                        <div class="divider"></div> -->
                         <li class="active"><a href="#">Главная</a></li>
-                        <li><a href="#">Каталог</a></li>
                         <li class="dropdown"><a href="#">Услуги</a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Компьютерные услуги</a></li>
@@ -113,10 +112,23 @@
                                 <li class="active"><a href="#"><i class="bi-speaker"></i>Аудиотехника</a>
                                     <div class="header-categoryMenu__submenu">
                                         <div class="hedaer-categoryLi__grid">
-                                            <ul>
+                                            <ul class="category-secondary">
                                                 <li><a href="#">Автомобильная акустика</a></li>
-                                                <li><a href="#">Аксессуары и наушники для колл-центра</a></li>
-                                                <li><a href="#">Диктофоны</a></li>
+                                                <li class="dropdown"><a href="#">Аксессуары и наушники для колл-центра</a>
+                                                    <ul>
+                                                        <li><a href="#">Диктофоны</a></li>
+                                                        <li><a href="#">Домашние кинотеатры</a></li>
+                                                        <li><a href="#">Домашние кинотеатры</a></li>
+                                                        <li><a href="#">Домашние кинотеатры</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="#">Диктофоны</a>
+                                                    <ul>
+                                                        <li><a href="#">Lorem.</a></li>
+                                                        <li><a href="#">Numquam?</a></li>
+                                                        <li><a href="#">Porro.</a></li>
+                                                    </ul>
+                                                </li>
                                                 <li><a href="#">Домашние кинотеатры</a></li>
                                                 <li><a href="#">Звуковые панели</a></li>
                                                 <li><a href="#">Колонки и сабвуферы</a></li>
@@ -132,7 +144,7 @@
                                             <div class="header-categoryMenu__good">
                                                 <div class="image"><img src="./img/goods/4.jpg" alt=""></div>
                                                 <h4>Начиная с $15.80</h4>
-                                                <button class="btn btn-primary">Смотреть товар <i class="fas fa-chevron-right ml-2"></i></button>
+                                                <button class="btn btn-primary">See good <i class="fas fa-chevron-right ml-2"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -143,7 +155,14 @@
                                             <div class="group">
                                                 <ul>
                                                     <li class="heading"><a href="#">Видеокамеры</a></li>
-                                                    <li><a href="#">Видеокамеры CANON</a></li>
+                                                    <li class="dropdown"><a href="#">Видеокамеры CANON</a>
+                                                        <ul>
+                                                            <li><a href="">Lorem, ipsum.</a></li>
+                                                            <li><a href="">Repellendus, consequatur!</a></li>
+                                                            <li><a href="">Nobis, quibusdam.</a></li>
+                                                            <li><a href="">Tenetur, totam.</a></li>
+                                                        </ul>
+                                                    </li>
                                                     <li><a href="#">Видеокамеры PANASONIC</a></li>
                                                     <li><a href="#">Видеокамеры SONY</a></li>
                                                     <li><a href="#">Видеорегистраторы</a></li>
@@ -156,7 +175,14 @@
                                             </div>
                                             <ul>
                                                 <li class="heading"><a href="#">Фотокамеры</a></li>
-                                                <li><a href="#">Фотокамеры CANON</a></li>
+                                                <li class="dropdown"><a href="#">Фотокамеры CANON</a>
+                                                    <ul>
+                                                        <li><a href="">Lorem, ipsum.</a></li>
+                                                        <li><a href="">Aliquam, doloribus!</a></li>
+                                                        <li><a href="">Pariatur, voluptas?</a></li>
+                                                        <li><a href="">Nostrum, et.</a></li>
+                                                    </ul>
+                                                </li>
                                                 <li><a href="#">Фотокамеры FUJIFILM</a></li>
                                                 <li><a href="#">Фотокамеры NIKON</a></li>
                                                 <li><a href="#">Фотокамеры SONY</a></li>
@@ -164,7 +190,7 @@
                                             <div class="header-categoryMenu__good">
                                                 <div class="image"><img src="./img/goods/7.png" alt=""></div>
                                                 <h4>Начиная с $15.80</h4>
-                                                <button class="btn btn-primary">Смотреть товар<i class="fas fa-chevron-right ml-2"></i></button>
+                                                <button class="btn btn-primary">See good <i class="fas fa-chevron-right ml-2"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -515,135 +541,388 @@
                             </div>
                         </div>
                     </section>
-                
-                    <section class="goods goods_slider pb-5">
+
+                    <!-- goods section -->
+                    <section class="goods goods_slider recomend pb-5">
                         <div class="section-container">
                             <div class="section-row align-items-center mb-3">
                                 <h1 class="section-heading">Наши новинки</h1>
-                                <button class="goods__slides-control ml-auto"><i class="fas fa-chevron-left"></i></button>
-                                <button class="goods__slides-control"><i class="fas fa-chevron-right"></i></button>
+                                <button class="goods__slides-control goods__slides-control_left_new ml-auto"><i class="fas fa-chevron-left"></i></button>
+                                <button class="goods__slides-control goods__slides-control_right_new"><i class="fas fa-chevron-right"></i></button>
                             </div>
-                            <div class="goods-item__grid section-grid_4">
-                                <div class="goods__item goods-item">
-                                    <div class="goods-item__image">
-                                        <img src="./img/goods/1.jpg" alt="">
-                                        <div class="goods-item__favour"><i class="fas fa-heart"></i></div>
-                                        <div class="goods-item__newLabel">новинка</div>
-                                    </div>
-                                    <div class="goods-item__textContent">
-                                        <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
-                                        <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
-                                        <div class="goods-item__row">
-                                            <span class="goods-item__price">130 000 UZS</span>
-                                            <ul class="goods-item__stars">
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                            </ul>
+                            <div class="goods__new swiper-container">
+                                <div class="goods-item__grid swiper-wrapper">
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/1.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
                                         </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="goods-item__price-cross">130 000 UZS</span>
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/4.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
+                                        </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="goods-item__row align-items-center">
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                 
-                                        <div class="goods-item__details">
-                                            <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/4.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
+                                        </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="goods-item__row align-items-center">
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/4.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
+                                        </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="goods-item__row align-items-center">
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                                <span class="ml-auto goods-item__price-cross">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="goods__item goods-item swiper-slide">
+                                        <div class="goods-item__image">
+                                            <img src="./img/goods/4.jpg" alt="">
+                                            <div class="goods-item__favour"><i class="bi-heart"></i></div>
+                                            <div class="goods-item__newLabel">новинка</div>
+                                        </div>
+                                        <div class="goods-item__textContent">
+                                            <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
+                                            <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
+                                            <div class="goods-item__row align-items-center">
+                                                <span class="goods-item__price">130 000 UZS</span>
+                                                <span class="ml-auto goods-item__price-cross">130 000 UZS</span>
+                                            </div>
+                                            <div class="goods-item__row">
+                                                <span class="goods-item__access"><i class="fas fa-check"></i>В наличии</span>
+                                                <ul class="goods-item__stars">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="goods-item__details">
+                                                <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
+                                                <div class="goods-item__row">
+                                                    <a href="#"><i class="fas fa-envelope"></i>Сообщение</a>
+                                                    <a  class="ml-auto" href="#"><i class="fas fa-phone"></i>Звонить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
                                 </div>
-                
-                                <div class="goods__item goods-item">
-                                    <div class="goods-item__image">
-                                        <img src="./img/goods/4.jpg" alt="">
-                                        <div class="goods-item__favour"><i class="fas fa-heart"></i></div>
-                                        <div class="goods-item__newLabel">новинка</div>
-                                    </div>
-                                    <div class="goods-item__textContent">
-                                        <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
-                                        <a href="#" class="goods-item__title">Sony Беспроводные наушники WI-C310B Black Sony Беспроводные наушники WI-C310B Black</a>
-                                        <div class="goods-item__row">
-                                            <span class="goods-item__price">130 000 UZS</span>
-                                            <ul class="goods-item__stars">
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                            </ul>
-                                        </div>
-                
-                                        <div class="goods-item__details">
-                                            <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="goods__item goods-item">
-                                    <div class="goods-item__image">
-                                        <img src="./img/goods/4.jpg" alt="">
-                                        <div class="goods-item__favour"><i class="fas fa-heart"></i></div>
-                                        <div class="goods-item__newLabel">новинка</div>
-                                    </div>
-                                    <div class="goods-item__textContent">
-                                        <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
-                                        <a href="#" class="goods-item__title">Sony Беспроводные наушники</a>
-                                        <div class="goods-item__row">
-                                            <span class="goods-item__price">130 000 UZS</span>
-                                            <ul class="goods-item__stars">
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                            </ul>
-                                        </div>
-                
-                                        <div class="goods-item__details">
-                                            <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="goods__item goods-item">
-                                    <div class="goods-item__image">
-                                        <img src="./img/goods/4.jpg" alt="">
-                                        <div class="goods-item__favour"><i class="fas fa-heart"></i></div>
-                                        <div class="goods-item__newLabel">новинка</div>
-                                    </div>
-                                    <div class="goods-item__textContent">
-                                        <span class="goods-item__category"><i class="far fa-tags"></i>Аксессуары</span>
-                                        <a href="#" class="goods-item__title">Sony Беспроводные наушники</a>
-                                        <div class="goods-item__row">
-                                            <span class="goods-item__price">130 000 UZS</span>
-                                            <ul class="goods-item__stars">
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                            </ul>
-                                        </div>
-                
-                                        <div class="goods-item__details">
-                                            <button class="btn btn-primary"><i class="fas fa-cart-plus mr-2"></i>add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                
                             </div>
                         </div>
                     </section>
 
-                    <section class="news">
+                    <!-- Users rewives section -->
+
+                    <section class="users-review">
                         <div class="section-container">
                             <div class="d-flex">
-                                <h1 class="section-heading">Новости</h1>
-                                <a class="ml-auto" href="#">Смотреть все <i class="fas fa-chevron-right"></i></a>
+                                <h1 class="section-heading mb-4">Отзывы</h1>
+                                <!-- <a href="#" class="ml-auto"><i class="fas fa-eye"></i>Все новости</a> -->
+                            </div>
+                            <div class="users-review__content">
+                                <div class="users-review__container swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="users-review__item users-review-item">
+                                                <ul class="nav">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, repellendus?</p>
+                                                <div class="users-review-item__info">
+                                                    <div class="users-review-item__image"><img src="./img/users/1.jpg" alt=""></div>
+                                                    <div class="users-review-item__text">
+                                                        <h4>Adrean Levis</h4>
+                                                        <span>Jan 27, 2020</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="swiper-slide">
+                                            <div class="users-review__item users-review-item">
+                                                <ul class="nav">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, repellendus?</p>
+                                                <div class="users-review-item__info">
+                                                    <div class="users-review-item__image"><img src="./img/users/1.jpg" alt=""></div>
+                                                    <div class="users-review-item__text">
+                                                        <h4>Adrean Levis</h4>
+                                                        <span>Jan 27, 2020</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="swiper-slide">
+                                            <div class="users-review__item users-review-item">
+                                                <ul class="nav">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, repellendus?</p>
+                                                <div class="users-review-item__info">
+                                                    <div class="users-review-item__image"><img src="./img/users/1.jpg" alt=""></div>
+                                                    <div class="users-review-item__text">
+                                                        <h4>Adrean Levis</h4>
+                                                        <span>Jan 27, 2020</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="swiper-slide">
+                                            <div class="users-review__item users-review-item">
+                                                <ul class="nav">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, repellendus?</p>
+                                                <div class="users-review-item__info">
+                                                    <div class="users-review-item__image"><img src="./img/users/1.jpg" alt=""></div>
+                                                    <div class="users-review-item__text">
+                                                        <h4>Adrean Levis</h4>
+                                                        <span>Jan 27, 2020</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="swiper-slide">
+                                            <div class="users-review__item users-review-item">
+                                                <ul class="nav">
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li class="active"><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                    <li><a href=""><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, repellendus?</p>
+                                                <div class="users-review-item__info">
+                                                    <div class="users-review-item__image"><img src="./img/users/1.jpg" alt=""></div>
+                                                    <div class="users-review-item__text">
+                                                        <h4>Adrean Levis</h4>
+                                                        <span>Jan 27, 2020</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="users-review__slidesBtn left users-review__slidesBtn_left"><i class="fas fa-chevron-left"></i></div>
+                                <div class="users-review__slidesBtn right users-review__slidesBtn_right"><i class="fas fa-chevron-right"></i></div>
                             </div>
                         </div>
                     </section>
             </div>
         </div>
     </div>
+<!-- footer section here -->
+    <footer class="footer bg-light">
+        <div class="section-container">
+            <div class="section-grid_4">
+                <div class="footer__item">
+                    <h4>О МАГАЗИНЕ</h4>
+                    <p>Вас приветствует интернет магазин www.mytech.uz У нас Вы можете найти широкий ассортимент товаров бытовой, компьютерной и офисной техники. Наши менеджеры всегда готовы проконсультировать и помочь Вам в выборе и</p>
+                </div>
+                <div class="footer__item schedule">
+                    <h4>ГРАФИК РАБОТЫ</h4>
+                    <div class="d-flex flex-column">
+                        <div class="d-flex">
+                            <span>Понедельник</span>
+                            <span class="ml-auto">09:30 - 20:00</span>
+                        </div>
+                        <div class="d-flex">
+                            <span>Вторник</span>
+                            <span class="ml-auto">09:30 - 20:00</span>
+                        </div>
+                        <div class="d-flex">
+                            <span>Среда</span>
+                            <span class="ml-auto">09:30 - 20:00</span>
+                        </div>
+
+                        <div class="d-flex">
+                            <span>Четверг</span>
+                            <span class="ml-auto">09:30 - 20:00</span>
+                        </div>
+
+                        <div class="d-flex">
+                            <span>Пятница</span>
+                            <span class="ml-auto">09:30 - 20:00</span>
+                        </div>
+
+                        <div class="d-flex">
+                            <span>Суббота</span>
+                            <span class="ml-auto">09:30 - 20:00</span>
+                        </div>
+
+                        <div class="d-flex">
+                            <span>Воскресенье</span>
+                            <span class="ml-auto">10:00 - 18:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h4>КАТЕГОРИИ</h4>
+                    <ul>
+                        <li><a href="#"><i class="far fa-air-conditioner"></i>Кондиционеры</a></li>
+                        <li><a href="#"><i class="far fa-gamepad-alt"></i>Игровые приставки</a></li>
+                        <li><a href="#"><i class="far fa-shower"></i>Электробритвы</a></li>
+                        <li><a href="#"><i class="far fa-shower"></i>Эпиляторы</a></li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <h4>ДОПОЛНИТЕЛЬНО</h4>
+                    <ul>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">Акция</a></li>
+                        <li><a href="#">Сертификаты</a></li>
+                        <li><a href="#">Филиалы</a></li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <ul class="nav">
+                        <li class="pr-3"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="pr-3"><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li class="pr-3"><a href=""><i class="fab fa-odnoklassniki"></i></a></li>
+                        <li><a href=""><i class="fab fa-telegram-plane"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="p-0 m-0">
+        <div class="footer__down bg-light d-flex align-items-center justify-content-center">
+            <p class="p-0 m-0">© 2014 - 2021 Mytech.uz Сайт разработан на платформе Glotr.uz. Все права защищены.</p>
+        </div>
+    </footer>
 
     <!-- jasvascript include section -->
 
