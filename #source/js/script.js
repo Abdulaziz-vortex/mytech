@@ -2,6 +2,7 @@
 //js file
 $(document).ready(()=>{
     let mainSlider = new Swiper('.main-slider__container', {
+        slidesPerView: 1,
         pagination: {
             el : '.swiper-pagination',
             clickable : true,
@@ -22,14 +23,15 @@ $(document).ready(()=>{
         }
     });
 
-    let goodsSale = new Swiper('.goods__sale', {
-        slidesPerView: 1,
-        spaceBetween: 20,
 
-        navigation : {
-            nextEl : '.goods__slides-control_right_new',
-            prevEl : '.goods__slides-control_left_new'
-        }
+    let usersReview = new Swiper('.users-review__container', {
+        slidesPerView : 4,
+        spaceBetween: 15,
+        navigation: {
+            nextEl : '.users-review__slidesBtn_right',
+            prevEl : '.users-review__slidesBtn_left',
+        } ,
+        // loop : true,
     });
 
     // $('#header-category').on('click', (e) => {
@@ -48,3 +50,9 @@ $(document).ready(()=>{
 
 });
 
+// accordion section 
+
+$('.hedaer-categoryLi__grid ul > .dropdown').on('click', function(e){
+    $(this).children('ul').slideToggle();
+    $(this).toggleClass('active');
+});
